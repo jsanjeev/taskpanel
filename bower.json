@@ -1,0 +1,24 @@
+{
+  "name": "nashventures",
+  "description": "",
+  "main": "client/index.html",
+  "authors": [
+    "Sanjeev Jha <a1sanjeev@outlook.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.0",
+    "bootstrap": "3.3.7",
+    "angular-route": "1.4.0",
+    "jquery": "^3.3.1"
+  }
+}

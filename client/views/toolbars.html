@@ -1,0 +1,24 @@
+<header class="bs-docs-nav navbar navbar-static-top" id="top" ng-controller="headersCtrl">
+    <div class="container">
+        <div class="navbar-header col-md-4">
+            <button aria-controls="bs-navbar" aria-expanded="false" class="navbar-toggle collapsed"
+                    data-target="#bs-navbar" data-toggle="collapse" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#/" class="navbar-brand">NVTask</a>
+        </div>
+        <nav class="navbar-collapse collapse pull-left" id="bs-navbar" aria-expanded="false" style="height:1px;">
+            <ul class="nav navbar-nav">
+                <li ng-class="{active:isActive('/')}"><a href="#/">Home</a>
+                </li>
+                <li ng-class="{ active:isActive('/search')}"><a href="#/search">Search</a>
+                </li>
+                <li ng-class="{ active:isActive('/list')}"><a href="#/list">List</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
