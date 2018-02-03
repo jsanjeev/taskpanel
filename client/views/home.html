@@ -1,5 +1,21 @@
 <div ng-include="'./views/toolbars.html'"></div>
 
-<section class="common">
-<p>Home Page Works!!!!!</p>
+<section class="common" ng-controller="homeCtrl">
+    <div class="row">
+        <div class="col-md-3">
+            <p1>Your searched History :-</p1>
+        </div>
+        <div class="col-md-7 pull-left">
+            <div ng-if="searched_data.length==0">
+                <p class="col-md-6">You Haven't Searched Anything Yet!</p>
+                <p2><a href="#/search">Search Here!</a></p2>
+            </div>
+            <div class="form-group" ng-if="searched_data.length>0">
+                <select class="form-control" ng-model="searched_item"
+                        ng-options="item._id as item.search_key for item in searched_data">
+                    <option value="">-Select-</option>
+                </select>
+            </div>
+        </div>
+    </div>
 </section>

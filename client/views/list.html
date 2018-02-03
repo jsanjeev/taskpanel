@@ -1,4 +1,23 @@
 <div ng-include="'./views/toolbars.html'"></div>
-<section class="common">
-    <p>List Page Works!!!!!</p>
+
+<section class="common" ng-controller="homeCtrl" style="overflow:auto">
+    <div class="row">
+        <div class="col-md-3">
+            <p1>Select One To List images :-</p1>
+        </div>
+        <div class="col-md-7 pull-left">
+            <div class="form-group">
+                <select class="form-control" ng-model="selected_item"
+                        ng-options="item._id as item.search_key for item in searched_data"
+                        ng-change="getImageData(selected_item)">
+                    <option value="">-Select-</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div ng-if="images_data.length>0">
+        <span ng-repeat="img in images_data" style="margin:12px">
+            <img ng-src="{{img}}" alt="" style="margin: 12px">
+        </span>
+    </div>
 </section>

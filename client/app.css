@@ -32,3 +32,23 @@ li a {
 .navbar {
     border: none;
 }
+
+.common{
+    padding:3%;
+}
+
+p{
+    font-size: 18px;
+}
+p1{
+    font-size:21px;
+    text-decoration:underline;
+}
+p2 a{
+    font-size:18px;
+    text-decoration:underline;
+}
+
+p4{
+    font-size:12px;
+}

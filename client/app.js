@@ -1,7 +1,10 @@
 var app = angular.module('myApp',
     [
         'ngRoute',
-        'myApp.headers'
+        'mainService',
+        'myApp.headers',
+        'myApp.home',
+        'myApp.search'
     ]);
 
 app.config(function ($routeProvider) {

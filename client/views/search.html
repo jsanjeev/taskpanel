@@ -1,5 +1,27 @@
 <div ng-include="'./views/toolbars.html'"></div>
 
-<section class="common">
-    <p>Search Page Works!!!!!</p>
+<section class="common" ng-controller="searchCtrl">
+    <div class="row">
+        <form ng-submit="searchForData(search)">
+            <div class="col-md-5">
+                <label>Enter Keyword</label>
+                <input type="text" required class="form-control" ng-model="search.key"
+                       placeholder="Enter Search Keyword">
+            </div>
+            <div class="col-md-5">
+                <label>Select Search Engine
+                    <p4>(Most Recommended Bing Very Fast)</p4>
+                </label>
+                <select class="form-control" ng-model="search.engine">
+                    <option value="bing">Bing</option>
+                    <option value="google">Google</option>
+                    <option value="yahoo">Yahoo</option>
+                </select>
+            </div>
+            <div>
+                <br>
+                <button class="btn btn-primary" type="submit" style="margin-top: 4px">Submit</button>
+            </div>
+        </form>
+    </div>
 </section>

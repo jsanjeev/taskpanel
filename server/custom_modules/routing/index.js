@@ -3,7 +3,6 @@ const app = express();
 const bodyParser = require('body-parser');
 const db=require('../database');
 
-
 // Use BodyParser to parse data to json coming in req.body
 app.use(bodyParser.json());
 
