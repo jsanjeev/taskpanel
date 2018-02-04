@@ -23,7 +23,7 @@ var function_to_get_requested_data = function (req, res) {
             app.sendError(req, res, 'Something went wrong!!!', err);
         else {
             var result = data['files'].map(function (item) {
-                return 'https://aqueous-gorge-93578.herokuapp.com:9000/api/docs/getmyfile/' + item;
+                return 'https://aqueous-gorge-93578.herokuapp.com/api/docs/getmyfile/' + item;
             });
             app.send(req, res, result);
         }
