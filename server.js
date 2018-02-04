@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
 });
 
 //Application Listening on given port
-var port = 9000;
+var port = process.env.PORT || 9000;
 app.listen(port, function (err) {
     if (!err) {
         console.log('Listening on port...' + port);
