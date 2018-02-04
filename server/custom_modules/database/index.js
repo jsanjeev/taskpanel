@@ -2,7 +2,9 @@ const mongoose = require('mongoose');
 const objectID = mongoose.Types.ObjectId();
 
 // Connection For MongoDatabase
-const uri = 'mongodb://127.0.0.1:27017/admin';
+// const uri = 'mongodb://127.0.0.1:27017/admin'; // Local DB Connection
+const uri='mongodb://admin:nimda@ds225038.mlab.com:25038/ffa_db'; // Live DB Connection
+
 mongoose.connect(uri);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
