@@ -3,7 +3,7 @@ const gulp = require('gulp');
 const webServer=require('gulp-webserver');
 const nodeMon=require('gulp-nodemon');
 
-const _index='./client/';
+const _index='./public/';
 const options = {
     host: 'localhost',
     port:9000,
@@ -14,7 +14,7 @@ const options = {
 
 gulp.task('node',function () {
     nodeMon({
-        script: './server/index.js',
+        script: './server.js',
         env: { 'NODE_ENV': 'production' }
     })
 });

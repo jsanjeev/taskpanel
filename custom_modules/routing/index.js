@@ -2,10 +2,11 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const db=require('../database');
+const path=require('path');
+
 
 // Use BodyParser to parse data to json coming in req.body
 app.use(bodyParser.json());
-
 
 // Allow CORS Policy
 app.use(function (req, res, next) {
@@ -14,7 +15,6 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Username, SourceKey");
     next();
 });
-
 
 // Customize Server Response To Client
 app.ErrorResponse = function (msg, stackTrace) {

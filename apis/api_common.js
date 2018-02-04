@@ -10,7 +10,7 @@ var api_path = function (path) {
 };
 
 var compressed_images_and_save = function (key, images, callback) {
-    var path = './server/uploads/';
+    var path = './uploads/';
     var img_array = [];
     var county = 0;
     async.eachSeries(images,

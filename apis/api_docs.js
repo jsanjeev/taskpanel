@@ -10,7 +10,7 @@ var api_path = function (path) {
 
 var function_to_get_file = function (req, res) {
     var myfilename = req.params.myfilename;
-    var location = './server/uploads';
+    var location = './uploads';
     res.sendFile(path.resolve(location + '/' + myfilename));
 };
 app.get(api_path('/getmyfile/:myfilename'), function_to_get_file);
@@ -23,7 +23,7 @@ var function_to_get_requested_data = function (req, res) {
             app.sendError(req, res, 'Something went wrong!!!', err);
         else {
             var result = data['files'].map(function (item) {
-                return 'http://localhost:8100/api/docs/getmyfile/' + item;
+                return 'http://localhost:9000/api/docs/getmyfile/' + item;
             });
             app.send(req, res, result);
         }
