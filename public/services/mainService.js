@@ -1,7 +1,7 @@
 var app = angular.module('mainService', []);
 
 app.factory('apiSrv', function ($location) {
-    var baseUrl = $location.protocol() + '://' + $location.host() + ':9000';
+    var baseUrl = $location.protocol() + '://' + $location.host();
     var obj = this;
     this.path = function (url) {
         return baseUrl + url;
